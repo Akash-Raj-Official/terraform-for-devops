@@ -78,3 +78,8 @@ resource aws_instance my_instance {
     Name = each.key # "My-automated-server"
   }
 }
+
+resource "aws_instance" "my_new_instance" {
+  ami = "unknown"
+  instance_type = "unknown"
+}
