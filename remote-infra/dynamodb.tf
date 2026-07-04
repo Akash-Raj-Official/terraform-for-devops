@@ -1,5 +1,5 @@
 resource "aws_dynamodb_table" "basic-dynamodb-table" {
-  name           = "my-dynamodb-table-${random_string.bucket_suffix.result}"
+  name           = "my-dynamodb-table-1"
   billing_mode   = "PAY_PER_REQUEST"
   hash_key       = "LockID"
 

@@ -79,17 +79,8 @@ resource aws_instance my_instance {
   }
 }
 
-resource "aws_instance" "my_new_instance" {
-  ami = "unknown"
-  instance_type = "unknown"
-}
+# resource "aws_instance" "my_new_instance" {
+#   ami = "unknown"
+#   instance_type = "unknown"
+# }
 
-resource "aws_key_pair" "default" {
-  key_name   = "Linux Key"
-  public_key = file("./linux-key.pub")
-}
-
-import {
-  to = aws_key_pair.default
-  id = "Linux Key"
-}
