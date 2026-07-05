@@ -9,5 +9,6 @@ terraform.tfvars
 .terraform.lock.hcl
 **/.terraform.lock.hcl
 
-# Local project files
+# Sensitive local files
 my-key
+my-key.pub
