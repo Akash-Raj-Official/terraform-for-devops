@@ -29,7 +29,7 @@ variable "vol_size" {
 }
 
 variable "env" {
-  default = "prod"
+  default = "dev"
   type = string
   description = "Set env and validate configuration"
 }
