@@ -7,8 +7,11 @@ provider "aws" {
 # Key Pair
 
 resource aws_key_pair my_key {
-  key_name = "my-key"
+  key_name = "${var.env}-my-key"
   public_key = file("my-key.pub")
+  tags = {
+    Environment = var.env
+  }
 }
 
 # VPC Default
@@ -20,9 +23,13 @@ resource aws_default_vpc default {
 # Security Group
 
 resource aws_security_group my_sg {
-  name = "my-sg"
+  name = "${var.env}-my-sg"
   vpc_id = aws_default_vpc.default.id
   description = "This is my instance security group"
+  tags = {
+    Name = "${var.env}-my-sg"
+    Environment = var.env
+  }
 
   # Ingress rule
   
