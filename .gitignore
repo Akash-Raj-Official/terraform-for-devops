@@ -1,9 +1,13 @@
 *.tfstate
 *.tfstate.backup
+*.tfvars
 terraform.tfvars
-remote-infra/terraform.tfvars
-remote-infra/terraform.tfstate
-remote-infra/terraform.tfstate.backup
-remote-infra/.terraform/
-remote-infra/.terraform.lock.hcl.terraform/
+
+# Terraform local directories and provider binaries
 .terraform/
+**/.terraform/
+.terraform.lock.hcl
+**/.terraform.lock.hcl
+
+# Local project files
+my-key
