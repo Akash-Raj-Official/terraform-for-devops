@@ -57,8 +57,7 @@ resource aws_security_group my_sg {
 resource aws_instance my_instance {
   
   for_each = tomap({
-    My-automate-instance-micro = "t2.micro", 
-    My-automate-instance-medium = "t2.medium"
+    My-automate-instance-micro = "t2.micro"
   })
   # count = 1  # Create 3 instance in one go
   ami = var.ami_id
@@ -76,6 +75,7 @@ resource aws_instance my_instance {
   
   tags = {
     Name = each.key # "My-automated-server"
+    Environment = var.env
   }
 }
 
