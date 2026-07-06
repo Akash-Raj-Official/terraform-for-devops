@@ -9,6 +9,7 @@ module "dev-infra" {
   hash_key = "studentID"
 }
 
+# prod infra structure
 module "prod-infra" {
   source = "./infra-app"
   env = "prod"
@@ -19,6 +20,7 @@ module "prod-infra" {
   hash_key = "studentID"
 }
 
+# stg infra structure
 module "stg-infra" {
   source = "./infra-app"
   env = "stg"
