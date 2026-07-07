@@ -11,13 +11,13 @@ module "eks" {
     vpc_id = module.vpc.vpc_id
     subnet_ids = module.vpc.private_subnets
     cluster_addons = {
-        vpc_cni = {
+        vpc-cni = {
             most_recent = true
         }   
-        kube_proxy = {
+        kube-proxy = {
             most_recent = true
         }
-        core_dns = {
+        coredns = {
             most_recent = true
         }
     }
