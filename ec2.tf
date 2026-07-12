@@ -61,7 +61,6 @@ resource aws_instance my_instance {
   })
   # count = 1  # Create 3 instance in one go
   ami = var.ami_id
-  region = var.aws_region
   instance_type = each.value  # var.instance_type
   key_name = aws_key_pair.my_key.key_name
   user_data = file("script.sh")
