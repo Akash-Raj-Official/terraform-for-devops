@@ -6,7 +6,7 @@ locals {
     public_ip = inst.public_ip
     user      = var.instances[name].user
     os_family = var.instances[name].os_family
-  }}
+  } }
 
   ubuntu_hosts = { for name, inst in local.inventory : name => inst if inst.os_family == "ubuntu" }
   redhat_hosts = { for name, inst in local.inventory : name => inst if inst.os_family == "redhat" }
